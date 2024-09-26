@@ -12,4 +12,9 @@ export class UsersService {
         this.users.push(newUser);
         return newUser;
     }
+
+    findByUserName(username: string): UserDto | null{
+        return this.users.find(user => user.username === username);
+    }
+
 }
